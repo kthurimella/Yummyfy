@@ -1,0 +1,1 @@
+web: gunicorn src.hello_main:app --log-file=-
