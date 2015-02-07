@@ -3,6 +3,7 @@ from flask.ext.mongoengine import MongoEngine
 from flask.ext.login import LoginManager
 from flask.ext.openid import OpenID
 from config import basedir
+import os
 
 app = Flask(__name__)
 app.config.from_object('config')
