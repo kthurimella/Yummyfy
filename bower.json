@@ -1,0 +1,12 @@
+{
+  "name": "Yummyfy",
+  "version": "0.0.0",
+  "homepage": "http://yummyfy.herokuapp.com/",
+  "authors": [
+    "mkbotoman <mkbotoman@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4"
+  }
+}
