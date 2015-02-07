@@ -1,1 +1,1 @@
-web: gunicorn src.hello_main:app --log-file=-
+web: gunicorn app.yummyfy:app --log-file=-
