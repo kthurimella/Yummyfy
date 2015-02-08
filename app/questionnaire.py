@@ -6,5 +6,6 @@ secrect_key = "13ba33b4bi33jlq1lnu9i3oroe"
 
 def create_new_questionnaire():
     traitify_instance = Traitify(secrect_key)
+    assessment = traitify_instance.create_assessment("core")
 
 

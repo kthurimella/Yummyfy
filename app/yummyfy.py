@@ -13,6 +13,9 @@ def home():
 def welcome():
   return render_template('welcome.html')
 
+@app.route('/assessment')
+def assessment():
+    return render_template('assessment.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
