@@ -1,5 +1,7 @@
 # import the Flask class from the flask module
-from flask import render_template, redirect, url_for, request
+from flask import render_template
+
+from questionnaire import Questionnaire
 from forms import LoginForm
 from app import app
 
@@ -15,7 +17,9 @@ def welcome():
 
 @app.route('/assessment')
 def assessment():
-    return render_template('assessment.html')
+    questionnaire = Questionnaire("core")
+    questionnaire.create_new_questionnaire()
+    return render_template('assessment.html', assessment_id = questionnaire.assessment.id)
 
 @app.route('/menu')
 def menu():
