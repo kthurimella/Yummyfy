@@ -1,18 +1,62 @@
 <!-- extend from base layout -->
-{% extends "base.html" %}
+<head>
+  <title>yummyfy</title>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+  <link rel="import" href="static/style.css">
+  <link rel="import" href="static/fancy.js">
+</head>
+<div class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+    </button>
+    <a class="navbar-brand" href="/"><img src="static/icon2.png" height="40"/></a>
+  </div>
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/login">Sign In</a></li>
+      <li><a href="/login">Create Account</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row menu">
+    <h1>Sign In</h1>
+    <span id="signinButton">
+      <span
+        class="g-signin"
+        data-callback="signinCallback"
+        data-clientid="1068973722058-cjfaulmh8lpj3ps1drumefrlf1nvje50.apps.googleusercontent.com"
+        data-cookiepolicy="single_host_origin"
+        data-requestvisibleactions="http://schema.org/AddAction"
+        data-scope="https://www.googleapis.com/auth/plus.login">
+      </span>
+    </span>
+  </div>
+</div>
 
-{% block content %}
-  <h1>Sign In</h1>
-  <form action="" method="post" name="login">
-      {{ form.hidden_tag() }}
-      <p>
-          Please enter your Email:<br>
-          {{ form.email }}<br>
 
-          Please enter your Password:<br>
-          {{ form.password }}<br>
-      </p>
-      <p>{{ form.remember_me }} Remember Me</p>
-      <p><input type="submit" value="Sign In"></p>
-  </form>
-{% endblock %}
+<script type="text/javascript">
+function signinCallback(authResult) {
+  if (authResult['status']['signed_in']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+  } else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+</script>
