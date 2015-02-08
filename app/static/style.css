@@ -61,10 +61,32 @@ h4 {
 	border-radius: 15px;
 	border: 3px solid #B388FF;
 }
+.each{
+	margin-bottom: 5px;
+	background: #EEEEEE;
+	border-radius: 5px;
+	padding:15px 0;
+}
+.day, .img{
+	text-align: center;
+}
 .day{
-	height: 550px;
-	background: #CFD8DC;
-	padding: 5px;
-	border: 1px solid #311B92;
+	vertical-align: middle;
+}
+.img h3{
+	position: relative;
+	top: -200px;
+	color: #fff;
+	background-color:rgba(103,57,183,0.8);
+	padding: 5px 0;
+}
+.fa-star{
+	color: #FFC107;
+}
+.points{
+	margin-top: 100px;
+}
+.points h2{
+	color: #00C853;
 }
 </style>
