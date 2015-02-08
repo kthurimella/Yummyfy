@@ -3,6 +3,7 @@
   border-radius:0;
   background: #ECEFF1;
   border: 0;
+  margin-bottom: 0;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
 	background-color: #673AB7;
@@ -22,7 +23,43 @@
 #radio-button .radio {
 	margin: 20px 10px;
 }
-.b, .c, .d{
-	display: none;
+h1 {
+	color: #673AB7;
+}
+h4 {
+	color: #7E57C2;
+}
+.menu h4{
+	color: #673AB7;
+}
+.menu h2{
+	color: #673AB7;
+}
+.a input, .c input{
+	color: #311B92;
+}
+.assessment{
+	background: #607D8B;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 15px;
+}
+.index{
+	margin-top: 15px;
+}
+.box {
+	height: 250px;
+	background: #CFD8DC;
+	border-radius: 5px;
+	padding: 20px;
+}
+.menu{
+	margin-top: 15px;
+}
+.day{
+	height: 550px;
+	background: #CFD8DC;
+	padding: 5px;
+	border: 1px solid #311B92;
 }
 </style>

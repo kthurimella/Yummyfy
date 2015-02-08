@@ -1,28 +1,21 @@
 <head>
   <title>yummyfy</title>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="static/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
   <link rel="import" href="static/style.css">
   <link rel="import" href="static/fancy.js">
 </head>
-<script type="text/javascript">
-  //show one question at a time
-  $( "#next" ).click(function() {
-    console.log("WHATTTT");
-      $( this ).next( "div" ).show( "fast");
-  });
-</script>
- <div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
     </button>
-    <a class="navbar-brand" href="/signup"><img src="static/icon2.png" height="40"/></a>
+    <a class="navbar-brand" href="/"><img src="static/icon2.png" height="40"/></a>
   </div>
   <div class="navbar-collapse collapse navbar-inverse-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="/welcome">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="#">Menu</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -32,158 +25,163 @@
   </div>
 </div>
 <div class="container">
-  <h1>Tell us a little more...</h1>
-  <div class="parent">
-    <div class="a">
-      <h2>What are you eating goals?</h2>
-      <div class="goals">
-        <div class="radio radio-success">
-          <label>
-            <input type="radio" name="goals" value="option1" checked="">
-            Lose Weight
-          </label>
-        </div>
-        <div class="radio radio-success">
-          <label>
-            <input type="radio" name="goals" value="option1">
-            Lower my blood pressure
-          </label>
-        </div>
-        <div class="radio radio-success">
-          <label>
-            <input type="radio" name="goals" value="option1">
-            Lower my cholesterol
-          </label>
-        </div>
-        <div class="radio radio-success">
-          <label>
-            <input type="radio" name="goals" value="option1">
-            Eat clean
-          </label>
-        </div>
-        <div class="radio radio-success">
-          <label>
-            <input type="radio" name="goals" value="option1">
-            Save Money
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="b">
-      <h2>I consider myself:</h2>
-      <div class="dietary">
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1" checked="">
-            An omnivore
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            A pescatarian
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            A vegetarian
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            A Vegan
-          </label>
+  <div class="row">
+    <h1>Tell us a little more...</h1>
+    <div class="parent">
+      <div class="a col-md-3">
+        <h4>What are you eating goals?</h4>
+        <div class="goals">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="goals" value="option1" checked="">
+              Lose Weight
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="goals" value="option1">
+              Lower my blood pressure
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="goals" value="option1">
+              Lower my cholesterol
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="goals" value="option1">
+              Eat clean
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="goals" value="option1">
+              Save Money
+            </label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="c">
-      <h2>I am allergic to:</h2>
-      <div class="dietary">
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1" checked="">
-            Dairy
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Eggs
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Gluten
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Peanuts
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Seafood
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Sesame
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Soy
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Tree Nuts
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Wheat
-          </label>
+      <div class="b col-md-3">
+        <h4>I consider myself:</h4>
+        <div class="dietary">
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="dietary" value="option2" checked="">
+              An omnivore
+            </label>
+          </div>
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="dietary" value="option2">
+              A pescatarian
+            </label>
+          </div>
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="dietary" value="option2">
+              A vegetarian
+            </label>
+          </div>
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="dietary" value="option2">
+              A Vegan
+            </label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="d">
-      <h2>I want to cook dinner:</h2>
-      <div class="dietary">
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1" checked="">
-            Every night
-          </label>
+      <div class="c col-md-3">
+        <h4>I am allergic to:</h4>
+        <div class="allergy">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option1" checked="">
+              Dairy
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Eggs
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Gluten
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Peanuts
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Seafood
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Sesame
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Soy
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Tree Nuts
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="allergy" value="option3">
+              Wheat
+            </label>
+          </div>
         </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            4-5 nights per week
-          </label>
+      </div>
+      <div class="d col-md-3">
+        <h4>I want to cook dinner:</h4>
+        <div class="time">
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="time" value="option4" checked="">
+              Every night
+            </label>
+          </div>
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="time" value="option4">
+              4-5 nights per week
+            </label>
+          </div>
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="time" value="option4">
+              2-3 nights per week
+            </label>
+          </div>
+          <div class="radio radio-primary">
+            <label>
+              <input type="radio" name="time" value="option4">
+              Once a week
+            </label>
+          </div>
         </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            2-3 nights per week
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="dietary" value="option1">
-            Once a week
-          </label>
-        </div>
+      </div>
+      <div class="col-md-12">
+        <button type="button" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </div>

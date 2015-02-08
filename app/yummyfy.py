@@ -6,7 +6,7 @@ from app import app
 
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return render_template('index.html')
 
 
 @app.route('/welcome')
@@ -16,6 +16,10 @@ def welcome():
 @app.route('/assessment')
 def assessment():
     return render_template('assessment.html')
+
+@app.route('/menu')
+def menu():
+    return render_template('menu.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
