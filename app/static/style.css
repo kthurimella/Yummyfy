@@ -10,4 +10,19 @@
 .navbar-brand{
 	padding: 5px 15px;
 }
+.navbar-inverse .navbar-nav>li>a:hover{
+	color: #000;
+}
+#radio-button h2 {
+	font-size: 18.7199993133545px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	margin-top: 50px;
+}
+#radio-button .radio {
+	margin: 20px 10px;
+}
+.b, .c, .d{
+	display: none;
+}
 </style>
