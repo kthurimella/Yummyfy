@@ -1,6 +1,7 @@
 # import the Flask class from the flask module
+from flask import render_template, redirect, url_for, request
 from app import app
-from flask import Flask, render_template, redirect, url_for, request
+
 
 @app.route('/')
 def home():
