@@ -89,4 +89,7 @@ h4 {
 .points h2{
 	color: #00C853;
 }
+.rec h2, .ingreds h2{
+	color: #9575CD;
+}
 </style>

@@ -25,6 +25,14 @@ def assessment():
 def menu():
     return render_template('menu.html')
 
+@app.route('/recipe')
+def recipe():
+    return render_template('recipe.html')
+
+@app.route('/recipe2')
+def recipe2():
+    return render_template('recipe2.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
   form = LoginForm()
