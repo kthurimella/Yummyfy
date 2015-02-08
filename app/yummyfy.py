@@ -1,11 +1,12 @@
 # import the Flask class from the flask module
+from flask import render_template, redirect, url_for, request
+from forms import LoginForm
 from app import app
-from flask import Flask, render_template, redirect, url_for, request
-from .forms import LoginForm
+
 
 @app.route('/')
 def home():
-  return "Hello, World!"
+    return "Hello, World!"
 
 
 @app.route('/welcome')
