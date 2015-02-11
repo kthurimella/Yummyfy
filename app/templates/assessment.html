@@ -35,7 +35,11 @@
       Traitify.setHost("https://api-sandbox.traitify.com");
       Traitify.setVersion("v1");
       var assessmentId = '{{ assessment_id }}';
-      Traitify.ui.load(assessmentId, ".assessment")
+      traitify = Traitify.ui.load(assessmentId, ".assessment")
+
+      traitify.slideDeck.onFinished(
+        alert("Finished")
+      )
     </script>​
   </body>​
 ​</html>
