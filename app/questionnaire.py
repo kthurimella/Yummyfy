@@ -14,4 +14,5 @@ class Questionnaire:
 
     def get_assessment_results(self):
         personality_types = self.traitify_instance.get_personality_types(self.assessment.id)
-        return personality_types["personality_types"][0].personality_type
+        personality_type = personality_types["personality_types"][0].personality_type
+        return personality_type.name

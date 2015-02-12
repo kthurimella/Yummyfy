@@ -22,6 +22,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/menu">Menu</a></li>
+          <li><a href="/welcome">Health Test</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/login">Sign In</a></li>
@@ -35,11 +36,8 @@
       Traitify.setHost("https://api-sandbox.traitify.com");
       Traitify.setVersion("v1");
       var assessmentId = '{{ assessment_id }}';
-      traitify = Traitify.ui.load(assessmentId, ".assessment")
 
-      traitify.slideDeck.onFinished(
-        alert("Finished")
-      )
+      Traitify.ui.load(assessmentId, ".assessment");
     </script>​
   </body>​
 ​</html>
