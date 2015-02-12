@@ -1,23 +1,28 @@
 # import the Flask class from the flask module
-from flask import render_template
+from flask import render_template, request, redirect, url_for
 
 from questionnaire import Questionnaire
 from forms import LoginForm
 from app import app
 
 
+questionnaire = Questionnaire("core")
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-@app.route('/welcome')
+@app.route('/welcome', methods = ['POST', 'GET'])
 def welcome():
-  return render_template('welcome.html')
+    if request.method == 'POST':
+        return redirect(url_for('menu'))
+    # print questionnaire.get_assessment_results()
+    else:
+        return render_template('welcome.html')
 
 @app.route('/assessment')
 def assessment():
-    questionnaire = Questionnaire("core")
     questionnaire.create_new_questionnaire()
     return render_template('assessment.html', assessment_id = questionnaire.assessment.id)
 
@@ -35,5 +40,5 @@ def recipe2():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-  form = LoginForm()
-  return render_template('login.html', title='Sign In', form=form)
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
